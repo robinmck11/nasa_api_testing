@@ -21,6 +21,17 @@ describe "Near Earth Objects" do
     it "should be an integer (element_count)" do
       expect(@near_earth_objects.neos["element_count"]).to be_a Integer
     end
+
+  end
+
+  context "Each date in near_earth_objects" do
+    it "should contain an array (near_earth_objects)" do
+      @near_earth_objects.neos["near_earth_objects"].each do |date|
+        expect(date).to be_a Array
+      end
+    end
+
+    
   end
 
 

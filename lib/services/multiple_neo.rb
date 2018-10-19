@@ -16,8 +16,6 @@ class MultipleNeoService
   end
 
   def get_neos
-
     @neos = JSON.parse(self.class.get("start_date=#{@start_date}&end_date=#{@end_date}&api_key=lmQj2tczUARKJX7pRkwMwiNv6LRKCqIzFG7MD9aI").body)
-
   end
 end
