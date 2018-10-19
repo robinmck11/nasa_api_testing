@@ -30,9 +30,75 @@ describe "Near Earth Objects" do
         expect(date).to be_a Array
       end
     end
-
-    
   end
 
+    context "(In each near earth object date)" do
+      it "should be a hash" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first).to be_a Hash
+          end
+        end
 
-end
+        it "should be a string (id)" do
+          @near_earth_objects.near_earth.each do |near|
+            # expect(near.last.first['id']).to be_a String
+            expect(near.last.first["id"]).to be_a String
+          end
+        end
+
+        it "should be a string (neo_reference_id)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['neo_reference_id']).to be_a String
+          end
+        end
+
+        it "should be a string (name)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['name']).to be_a String
+          end
+        end
+
+        it "should be a string (nasa_jpl_url)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['nasa_jpl_url']).to be_a String
+          end
+        end
+
+        it "should be a float (absolute_magnitude_h)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['absolute_magnitude_h']).to be_a Float
+          end
+        end
+
+        it "should be a hash (links)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['links']).to be_a Hash
+          end
+        end
+
+        it "should be a hash (kilometers)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['links']).to be_a Hash
+          end
+        end
+
+        it "should be a hash (meters)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['links']).to be_a Hash
+          end
+        end
+
+        it "should be a hash (miles)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['links']).to be_a Hash
+          end
+        end
+
+        it "should be a hash (feet)" do
+          @near_earth_objects.near_earth.each do |near|
+            expect(near.last.first['links']).to be_a Hash
+          end
+        end
+
+      end
+    end
